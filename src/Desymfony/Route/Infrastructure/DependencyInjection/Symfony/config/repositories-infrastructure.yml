@@ -1,0 +1,5 @@
+services:
+  desymfony.route.infrastructure.persistence.doctrine.repository.doctrine_route_repository:
+    class: Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Repository\DoctrineRouteRepository
+    parent: desymfony.doctrine.entity_repository
+    public: false

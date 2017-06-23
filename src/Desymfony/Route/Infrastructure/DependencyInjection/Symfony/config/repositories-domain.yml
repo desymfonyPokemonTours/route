@@ -1,0 +1,3 @@
+services:
+  desymfony.route.domain.repository.route_repository:
+    alias: desymfony.route.infrastructure.persistence.doctrine.repository.doctrine_route_repository

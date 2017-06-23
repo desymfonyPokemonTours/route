@@ -1,0 +1,6 @@
+services:
+
+  desymfony.route.domain.service.get_route_by_id_service:
+    class: Desymfony\Route\Domain\Service\GetRouteByIdService
+    arguments:
+      - '@desymfony.route.domain.repository.route_repository'

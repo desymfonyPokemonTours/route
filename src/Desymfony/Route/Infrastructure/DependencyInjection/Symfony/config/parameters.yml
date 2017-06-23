@@ -1,0 +1,10 @@
+parameters:
+  is_debug_mode: true
+  desymfony.doctrine.orm.dbal:
+    host: '%database_host%'
+    port: '%database_port%'
+    dbname: '%database_name%'
+    user: '%database_user%'
+    password: '%database_password%'
+    driver: '%database_driver%'
+

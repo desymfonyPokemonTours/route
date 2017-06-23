@@ -1,0 +1,12 @@
+Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrineRoute:
+  table: route
+  type: entity
+  repositoryClass: Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Repository\DoctrineRouteRepository
+  id:
+    id:
+      type: integer
+      length: 11
+      unsigned: true
+      generator:
+        strategy: AUTO
+

@@ -1,0 +1,9 @@
+/bin/*
+!bin/console
+/composer.phar
+/vendor/
+/web/bundles/
+/.idea/
+.php_cs.cache
+/coverage
+.DS_Store
