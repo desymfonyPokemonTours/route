@@ -1,0 +1,26 @@
+Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrinePokemon:
+  table: pokemon
+  type: entity
+  id:
+    id:
+      type: integer
+      length: 11
+      unsigned: true
+      generator:
+        strategy: AUTO
+  manyToMany:
+    routes:
+      targetEntity: Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrineRoute
+      mappedBy: pokemons
+    types:
+      targetEntity: Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrineType
+      inversedBy: pokemons
+      joinTable:
+        name: pokemon_type
+        joinColumns:
+          pokemon_id:
+            referencedColumnName: id
+        inverseJoinColumns:
+          type_id:
+            referencedColumnName: id
+

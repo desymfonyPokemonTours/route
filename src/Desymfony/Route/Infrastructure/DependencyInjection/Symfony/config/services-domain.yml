@@ -4,3 +4,13 @@ services:
     class: Desymfony\Route\Domain\Service\GetRouteByIdService
     arguments:
       - '@desymfony.route.domain.repository.route_repository'
+
+  desymfony.route.domain.service.get_routes_by_pokemon_id_service:
+    class: Desymfony\Route\Domain\Service\GetRoutesByPokemonIdService
+    arguments:
+      - '@desymfony.route.domain.repository.route_repository'
+
+  desymfony.route.domain.service.get_routes_by_type_id_service:
+    class: Desymfony\Route\Domain\Service\GetRoutesByTypeIdService
+    arguments:
+      - '@desymfony.route.domain.repository.route_repository'

@@ -13,4 +13,16 @@ interface RouteRepository
      * @throws RouteNotFoundException
      */
     public function getById($routeId);
+
+    /**
+     * @param int $pokemonId
+     * @return Route[]
+     */
+    public function getByPokemonId($pokemonId);
+
+    /**
+     * @param int $typeId
+     * @return Route[]
+     */
+    public function getByTypeId($typeId);
 }

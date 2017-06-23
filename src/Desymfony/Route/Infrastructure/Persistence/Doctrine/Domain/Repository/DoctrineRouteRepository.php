@@ -20,6 +20,33 @@ class DoctrineRouteRepository extends DesymfonyEntityRepository implements Route
         return $route;
     }
 
+    public function getByPokemonId($pokemonId)
+    {
+        $queryBuilder = $this->createQueryBuilder('route');
+
+        $queryBuilder
+            ->innerJoin('route.pokemons', 'pokemon')
+            ->andWhere('pokemon.id = :pokemonId')
+            ->setParameter(':pokemonId', $pokemonId)
+        ;
+
+        return $queryBuilder->getQuery()->getResult();
+    }
+
+    public function getByTypeId($typeId)
+    {
+        $queryBuilder = $this->createQueryBuilder('route');
+
+        $queryBuilder
+            ->innerJoin('route.pokemons', 'pokemon')
+            ->innerJoin('pokemon.types', 'type')
+            ->andWhere('type.id = :typeId')
+            ->setParameter(':typeId', $typeId)
+        ;
+
+        return $queryBuilder->getQuery()->getResult();
+    }
+
     protected function getEntityNamespace()
     {
         return DoctrineRoute::class;

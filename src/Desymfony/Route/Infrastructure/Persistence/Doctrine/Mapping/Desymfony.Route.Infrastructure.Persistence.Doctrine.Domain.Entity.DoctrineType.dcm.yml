@@ -1,0 +1,14 @@
+Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrineType:
+  table: type
+  type: entity
+  id:
+    id:
+      type: integer
+      length: 11
+      unsigned: true
+      generator:
+        strategy: AUTO
+  manyToMany:
+    pokemons:
+      targetEntity: Desymfony\Route\Infrastructure\Persistence\Doctrine\Domain\Entity\DoctrinePokemon
+      mappedBy: types
